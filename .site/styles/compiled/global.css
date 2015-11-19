@@ -14,4 +14,26 @@ fieldset, legend, input, button {
   margin: 0;
   padding: 0; }
 
+a {
+  text-decoration: none; }
+
+nav {
+  display: block;
+  height: 100%;
+  width: 350px;
+  background-color: #E9E9E9; }
+
+.nav-header {
+  height: 100px;
+  padding: 20px; }
+
+.nav-main {
+  list-style: none; }
+  .nav-main a, .nav-main a:link, .nav-main a:visited {
+    display: block;
+    padding: 8px 20px;
+    color: #333; }
+  .nav-main a:hover, .nav-main a:active {
+    background-color: #DDD; }
+
 /*# sourceMappingURL=global.css.map */

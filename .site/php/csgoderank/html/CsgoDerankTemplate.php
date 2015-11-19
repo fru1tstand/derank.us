@@ -26,7 +26,7 @@ class CsgoDerankTemplate implements TemplateInterface {
 <head>
 	<title>CSGO Derank</title>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="shortcut icon" href="https://s3.amazonaws.com/ks_web/fru1t.me/favicon.ico" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400,600'>
@@ -34,6 +34,16 @@ class CsgoDerankTemplate implements TemplateInterface {
 </head>
 
 <body>
+	<nav>
+		<div class="nav-header">
+			CSGO Derank Lobbies
+		</div>
+		<ul class="nav-main">
+			<li><a href="/home">Home</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/code">Source Code</a></li>
+		</ul>
+	</nav>
 	<div class="page-header">{$fields[self::FIELD_TITLE]}</div>
 
 	<div id="global-content">{$fields[self::FIELD_BODY]}</div>

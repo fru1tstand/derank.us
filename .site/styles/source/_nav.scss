@@ -1,0 +1,25 @@
+nav {
+	display: block;
+	height: 100%;
+	width: $nav-width;
+	background-color: $nav-background-color;
+}
+.nav-header {
+	height: 100px;
+	padding: $content-padding;
+}
+
+.nav-main {
+	list-style: none;
+
+	a {
+		&, &:link, &:visited {
+			display: block;
+			padding: 8px $content-padding;
+			color: $nav-link-color;
+		}
+		&:hover, &:active {
+			background-color: $nav-link-active-background-color;
+		}
+	}
+}
