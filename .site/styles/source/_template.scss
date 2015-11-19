@@ -23,3 +23,7 @@ fieldset, legend, input, button {
 a {
 	text-decoration: none;
 }
+
+#global-content {
+	padding-left: $nav-width;
+}

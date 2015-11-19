@@ -17,10 +17,17 @@ fieldset, legend, input, button {
 a {
   text-decoration: none; }
 
+#global-content {
+  padding-left: 350px; }
+
 nav {
   display: block;
   height: 100%;
   width: 350px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
   background-color: #E9E9E9; }
 
 .nav-header {
