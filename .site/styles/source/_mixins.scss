@@ -1,0 +1,8 @@
+@mixin transition($params...) {
+	transition: $params;
+	-webkit-transition: $params;
+}
+@mixin transition-delay($delay) {
+	transition-delay: $delay;
+	-webkit-transition-delay: $delay;
+}

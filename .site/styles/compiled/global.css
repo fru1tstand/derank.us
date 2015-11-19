@@ -1,0 +1,17 @@
+* {
+  font-family: Raleway, Palatino, serif;
+  box-sizing: border-box; }
+
+body, html {
+  height: 100%;
+  background-color: #EEE; }
+
+body, html,
+h1, h2, h3, h4, h5, h6,
+ul, li, ol,
+p,
+fieldset, legend, input, button {
+  margin: 0;
+  padding: 0; }
+
+/*# sourceMappingURL=global.css.map */

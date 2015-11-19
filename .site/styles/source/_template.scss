@@ -1,0 +1,21 @@
+// This file contains all globally available classes n stuff.
+
+//** Basic apply-everwhere rules
+* {
+	font-family: Raleway, Palatino, serif;
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	background-color: $body-background-color;
+}
+
+body, html,
+h1, h2, h3, h4, h5, h6,
+ul, li, ol,
+p,
+fieldset, legend, input, button {
+	margin: 0;
+	padding: 0;
+}

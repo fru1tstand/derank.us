@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,CAAE;EACD,WAAW,EAAE,wBAAwB;EACrC,UAAU,EAAE,UAAU;;AAGvB,UAAW;EACV,MAAM,EAAE,IAAI;EACZ,gBAAgB,ECTO,IAAI;;ADY5B;;;;+BAIgC;EAC/B,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC",
+"sources": ["../source/_template.scss","../source/_variables.scss"],
+"names": [],
+"file": "global.css"
+}

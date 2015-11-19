@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^\.site/.+ - [L,NC]
+
+RewriteRule ^([^?.]+)(\?.+)?$ /index.php?page=$1 [L,QSA]
