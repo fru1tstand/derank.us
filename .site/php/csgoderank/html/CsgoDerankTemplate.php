@@ -16,7 +16,7 @@ class CsgoDerankTemplate implements TemplateInterface {
 	}
 
 	public static function getClass() {
-		return 'fru1tme\html\Fru1tMeTemplate';
+		return 'csgoderank\html\CsgoDerankTemplate';
 	}
 
 	public static function getRenderContents($fields) {
@@ -34,27 +34,9 @@ class CsgoDerankTemplate implements TemplateInterface {
 </head>
 
 <body>
-	<nav>
-		<form>
-			<!-- Static and scrolled banner -->
-			<input type="radio" class="controller" name="nav-state" id="nav-state-closed" checked="checked" />
-			<label for="nav-state-index" class="nav-banner" id="nav-closed-banner">{$fields[CsgoDerankTemplate::FIELD_TITLE]}</label>
-			<label for="nav-state-closed" class="nav-banner" id="nav-open-banner">{$fields[CsgoDerankTemplate::FIELD_TITLE]}</label>
+	<div class="page-header">{$fields[self::FIELD_TITLE]}</div>
 
-			<input type="radio" class="controller" name="nav-state" id="nav-state-index" />
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/resume">Résumé</a></li>
-				<li><a href="/projects">Projects</a></li>
-				<li><a href="/code">Code</a></li>
-				<li class="nav-close"><label for="nav-state-closed"></label></li>
-			</ul>
-		</form>
-	</nav>
-
-	<div id="global-content">{$fields[CsgoDerankTemplate::FIELD_BODY]}</div>
-
-	<script src="/.site/js/goog_analytics.js"></script>
+	<div id="global-content">{$fields[self::FIELD_BODY]}</div>
 </body>
 </html>
 HTML;
