@@ -37,6 +37,7 @@ class CsgoDerankTemplate implements TemplateInterface {
 	<nav>
 		<div class="nav-header">
 			CSGO Derank Lobbies
+			{$fields[self::FIELD_TITLE]}
 		</div>
 		<ul class="nav-main">
 			<li><a href="/home">Home</a></li>
@@ -44,7 +45,6 @@ class CsgoDerankTemplate implements TemplateInterface {
 			<li><a href="/code">Source Code</a></li>
 		</ul>
 	</nav>
-	<div class="page-header">{$fields[self::FIELD_TITLE]}</div>
 
 	<div id="global-content">{$fields[self::FIELD_BODY]}</div>
 </body>

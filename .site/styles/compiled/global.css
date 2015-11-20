@@ -4,7 +4,8 @@
 
 body, html {
   height: 100%;
-  background-color: #EEE; }
+  background-color: #EEE;
+  color: #535353; }
 
 body, html,
 h1, h2, h3, h4, h5, h6,
@@ -19,6 +20,54 @@ a {
 
 #global-content {
   padding-left: 350px; }
+
+.page-header {
+  padding: 80px 20px; }
+
+.section {
+  border-bottom: 1px solid #DDD;
+  padding: 0 20px; }
+
+.card {
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px 10px;
+  margin: 10px;
+  box-shadow: 1px 1px 3px 0 #CCC;
+  font-size: 14px;
+  width: 300px;
+  border-radius: 3px; }
+  .card .title {
+    font-weight: bold; }
+  .card .host {
+    font-size: 12px;
+    color: #999; }
+    .card .host::before {
+      content: 'Host: '; }
+  .card .lobby-link {
+    width: 100%;
+    border: none;
+    margin: 20px 0;
+    padding: 0 2px; }
+  .card .button {
+    display: inline-block;
+    border-radius: 2px;
+    color: #EEE; }
+    .card .button::before {
+      display: block;
+      padding: 0 10px; }
+  .card .button-join:link, .card .button-join:visited {
+    background-color: #57bbff; }
+  .card .button-join:hover, .card .button-join:active {
+    background-color: #55a8e9; }
+  .card .button-join::before {
+    content: "Quick Join"; }
+  .card .button-full:link, .card .button-full:visited {
+    background-color: #ff4c34; }
+  .card .button-full:hover, .card .button-full:active {
+    background-color: #d1432e; }
+  .card .button-full::before {
+    content: "Mark as Full"; }
 
 nav {
   display: block;

@@ -9,6 +9,7 @@
 body, html {
 	height: 100%;
 	background-color: $body-background-color;
+	color: $body-color;
 }
 
 body, html,
@@ -26,4 +27,68 @@ a {
 
 #global-content {
 	padding-left: $nav-width;
+}
+
+.page-header {
+	padding: $content-padding * 4 $content-padding;
+}
+.section {
+	border-bottom: 1px solid #DDD;
+	padding: 0 $content-padding;
+}
+
+// Cards
+.card {
+	display: inline-block;
+	vertical-align: top;
+	padding: $content-padding $content-padding / 2;
+	margin: $content-padding / 2;
+	box-shadow: 1px 1px 3px 0 #CCC;
+	font-size: 14px;
+	width: 300px;
+	border-radius: 3px;
+
+	.title {
+		font-weight: bold;
+	}
+	.host {
+		font-size: 12px;
+		color: #999;
+
+		&::before {
+			content: 'Host: ';
+		}
+	}
+	.lobby-link {
+		width: 100%;
+		border: none;
+		margin: $content-padding 0;
+		padding: 0 2px;
+	}
+
+	.button {
+		display: inline-block;
+		border-radius: 2px;
+		color: $card-button-color;
+
+		&::before {
+			display: block;
+			padding: 0 10px;
+		}
+	}
+	@mixin button-type($name, $bg-color, $bg-color-active, $text) {
+		.button-#{$name} {
+			&:link, &:visited {
+				background-color: $bg-color;
+			}
+			&:hover, &:active {
+				background-color: $bg-color-active;
+			}
+			&::before {
+				content: $text;
+			}
+		}
+	}
+	@include button-type('join', $join-bg, $join-bg-active, 'Quick Join');
+	@include button-type('full', $full-bg, $full-bg-active, 'Mark as Full');
 }
