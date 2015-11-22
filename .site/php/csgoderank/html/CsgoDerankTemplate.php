@@ -1,22 +1,19 @@
 <?php
 namespace csgoderank\html;
+use common\object\Clazz;
 use common\template\TemplateInterface;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
 
 /**
- * Class CSGO Derank template
+ * CSGO Derank template
  */
-class CsgoDerankTemplate implements TemplateInterface {
+class CsgoDerankTemplate implements TemplateInterface, Clazz {
 	const FIELD_BODY = "body";
 	const FIELD_TITLE = "title";
 
 	public static function getFields() {
 		return [self::FIELD_BODY, self::FIELD_TITLE];
-	}
-
-	public static function getClass() {
-		return 'csgoderank\html\CsgoDerankTemplate';
 	}
 
 	public static function getRenderContents($fields) {
@@ -50,5 +47,12 @@ class CsgoDerankTemplate implements TemplateInterface {
 </body>
 </html>
 HTML;
+	}
+
+	/**
+	 * @override
+	 */
+	public static function getClass() {
+		return 'csgoderank\html\CsgoDerankTemplate';
 	}
 }
