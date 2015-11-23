@@ -1,23 +1,19 @@
 <?php
-namespace csgoderank\html;
-use common\object\Clazz;
-use common\template\TemplateInterface;
-
+namespace csgoderank\html\template;
 require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
+use common\template\Template;
+use common\template\TemplateIdentifier;
 
 /**
  * CSGO Derank template
  */
-class CsgoDerankTemplate implements TemplateInterface, Clazz {
+class Main extends TemplateIdentifier {
 	const FIELD_BODY = "body";
 	const FIELD_TITLE = "title";
+}
 
-	public static function getFields() {
-		return [self::FIELD_BODY, self::FIELD_TITLE];
-	}
-
-	public static function getRenderContents($fields) {
-		return <<<HTML
+$renderFn = function($fields): string {
+	return <<<HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +30,7 @@ class CsgoDerankTemplate implements TemplateInterface, Clazz {
 	<nav>
 		<div class="nav-header">
 			CSGO Derank Lobbies
-			{$fields[self::FIELD_TITLE]}
+			{$fields[Main::FIELD_TITLE]}
 		</div>
 		<ul class="nav-main">
 			<li><a href="/home">Home</a></li>
@@ -43,16 +39,15 @@ class CsgoDerankTemplate implements TemplateInterface, Clazz {
 		</ul>
 	</nav>
 
-	<div id="global-content">{$fields[self::FIELD_BODY]}</div>
+	<div id="global-content">{$fields[Main::FIELD_BODY]}</div>
 </body>
 </html>
 HTML;
-	}
+};
 
-	/**
-	 * @override
-	 */
-	public static function getClass() {
-		return 'csgoderank\html\CsgoDerankTemplate';
-	}
-}
+Template::newBuilder()
+	->setId(Main::getId())
+	->addField(Main::FIELD_BODY)
+	->addField(Main::FIELD_TITLE)
+	->setGetRenderContentsFn($renderFn)
+	->register();

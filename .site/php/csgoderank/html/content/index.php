@@ -1,7 +1,8 @@
 <?php
 namespace csgoderank\html\content;
-use common\template\ContentPageBuilder;
-use csgoderank\html\CsgoDerankTemplate;
+require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
+use common\template\ContentPage;
+use csgoderank\html\template\Main;
 
 $body = <<<HTML
 <div class="page-header">
@@ -26,13 +27,11 @@ $body = <<<HTML
 		<a href="#" class="button button-join"></a>
 		<a href="#" class="button button-full"></a>
 	</div>
-
 </div>
-
 HTML;
 
-
-ContentPageBuilder::of(CsgoDerankTemplate::getClass())
-	->set(CsgoDerankTemplate::FIELD_TITLE, "Home")
-	->set(CsgoDerankTemplate::FIELD_BODY, $body)
-	->register();
+ContentPage::newBuilder()
+	->of(Main::getId())
+	->with(Main::FIELD_TITLE, "Home")
+	->with(Main::FIELD_BODY, $body)
+	->store();
