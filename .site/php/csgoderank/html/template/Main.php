@@ -46,8 +46,8 @@ HTML;
 };
 
 Template::newBuilder()
-	->setId(Main::getId())
+	->id(Main::getId())
 	->addField(Main::FIELD_BODY)
 	->addField(Main::FIELD_TITLE)
-	->setGetRenderContentsFn($renderFn)
+	->setRenderFn($renderFn)
 	->register();
