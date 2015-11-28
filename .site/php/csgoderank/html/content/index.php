@@ -1,8 +1,6 @@
 <?php
 namespace csgoderank\html\content;
 require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
-use common\template\ContentPage;
-use common\template\TemplateUtils;
 use csgoderank\html\template\LobbyCard;
 use csgoderank\html\template\Main;
 
@@ -21,7 +19,7 @@ $cardInfo = array(
 );
 $cards = "";
 foreach ($cardInfo as $info) {
-	$cards .= TemplateUtils::getTemplate(LobbyCard::getId())->getRenderContents($info);
+	$cards .= LobbyCard::createContentFrom($info)->getRenderContents();
 }
 $body = <<<HTML
 <div class="page-header">
@@ -36,8 +34,7 @@ $body = <<<HTML
 </div>
 HTML;
 
-ContentPage::newBuilder()
-	->of(Main::getId())
+Main::createContent()
 	->with(Main::FIELD_TITLE, "Home")
 	->with(Main::FIELD_BODY, $body)
-	->store();
+	->render();
