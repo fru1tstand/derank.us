@@ -1,12 +1,8 @@
 <?php
-include ".site/php/csgoderank/html/template/Main.php";
-use csgoderank\html\template\Main;
 
-$res = [];
-for ($i = 0; $i < 40; $i++) {
-	$res[$i] = microtime(true);
-	Main::benchmark();
-	$res[$i] = microtime(true) - $res[$i];
-}
+$arr1 = [1, 2, 3];
+$arr2 = $arr1;
+$arr2[] = 4;
 
-var_dump($res);
+var_dump($arr1);
+var_dump($arr2);

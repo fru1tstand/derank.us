@@ -21,7 +21,7 @@ class LobbyCard extends Content {
 	 * @param ContentField[] $fields An associative array mapping fields to ContentField objects.
 	 * @return string
 	 */
-	public static function getRenderContent(array $fields): string {
+	public static function getTemplateRenderContents(array $fields): string {
 		return <<<HTML
 <div class="card">
 	<div class="title">{$fields[self::FIELD_TITLE]}</div>

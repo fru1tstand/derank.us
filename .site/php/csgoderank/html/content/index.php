@@ -2,7 +2,7 @@
 namespace csgoderank\html\content;
 require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
 use csgoderank\html\template\LobbyCard;
-use csgoderank\html\template\Main;
+use csgoderank\html\template\StaticPage;
 
 $cardInfo = array(
 		array(
@@ -34,7 +34,7 @@ $body = <<<HTML
 </div>
 HTML;
 
-Main::createContent()
-	->with(Main::FIELD_TITLE, "Home")
-	->with(Main::FIELD_BODY, $body)
+StaticPage::createContent()
+	->with(StaticPage::FIELD_TITLE, "Home")
+	->with(StaticPage::FIELD_BODY, $body)
 	->render();
