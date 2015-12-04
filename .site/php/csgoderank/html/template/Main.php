@@ -18,7 +18,7 @@ class Main extends Content {
 	 * @param ContentField[] $fields An associative array mapping fields to ContentField objects.
 	 * @return string
 	 */
-	public static function getRenderContent(array $fields): string {
+	public static function getTemplateRenderContents(array $fields): string {
 		return <<<HTML
 <!DOCTYPE html>
 <html lang="en">
