@@ -25,10 +25,15 @@ class LobbyCard extends Content {
 		return <<<HTML
 <div class="card">
 	<div class="title">{$fields[self::FIELD_TITLE]}</div>
+	<div class="time">3 minutes ago</div>
 	<div class="host">{$fields[self::FIELD_HOST]}</div>
-	<input class="lobby-link" type="text" value="{$fields[self::FIELD_LOBBY_LINK]}" />
-	<a href="#" class="button button-join"></a>
-	<a href="#" class="button button-full"></a>
+	<div class="lobby-link">
+		<a href="{$fields[self::FIELD_LOBBY_LINK]}">{$fields[self::FIELD_LOBBY_LINK]}</a>
+	</div>
+	<div class="buttons">
+		<a href="#" class="button button-join"></a>
+		<a href="#" class="button button-full"></a>
+	</div>
 </div>
 HTML;
 	}
@@ -42,7 +47,7 @@ HTML;
 	 * @return TemplateField[]
 	 * @internal
 	 */
-	public static function getTemplateFields_Internal(): array {
+	static function getTemplateFields_Internal(): array {
 		return [
 			TemplateField::newBuilder()
 					->called(self::FIELD_HOST)
@@ -56,4 +61,5 @@ HTML;
 					->defaultingTo(self::FIELD_TITLE_DEFAULT)->build()
 		];
 	}
+
 }
