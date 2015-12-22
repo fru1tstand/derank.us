@@ -27,17 +27,16 @@ class LobbyCard extends Content {
 	 * @return string
 	 */
 	public static function getTemplateRenderContents(array $fields): string {
+		$time = round((time() - $fields[self::FIELD_POST_DATE]->getContent()) / 60);
 		return <<<HTML
-<tr data-db-id="{$fields[self::FIELD_DB_ID]}">
-	<td class="padding"></td>
-	<td class="descr">{$fields[self::FIELD_TITLE]}</td>
-	<td class="host">{$fields[self::FIELD_DISPLAY_NAME]}</td>
-	<td class="age">{$fields[self::FIELD_POST_DATE]}</td>
-	<td class="join"><i class="fa fa-external-link-square"></i></td>
-	<td class="full"><i class="fa fa-ban"></i></td>
-	<td class="hide"><i class="fa fa-times"></i></td>
-	<td class="padding"></td>
-</tr>
+<div data-db-id="{$fields[self::FIELD_DB_ID]}">
+	<div class="age">{$time}</div>
+	<div class="title">{$fields[self::FIELD_TITLE]}</div>
+	<div class="host">{$fields[self::FIELD_DISPLAY_NAME]}</div>
+	<div class="join"></div>
+	<div class="full"></div>
+	<div class="hide"></div>
+</div>
 HTML;
 	}
 

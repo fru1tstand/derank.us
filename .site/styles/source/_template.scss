@@ -1,6 +1,3 @@
-// This file contains all globally available classes n stuff.
-
-//** Basic apply-everwhere rules
 * {
 	font-family: Raleway, Palatino, serif;
 	box-sizing: border-box;
@@ -32,59 +29,7 @@ a {
 	}
 }
 
-#global-content {
+.section {
+	padding: $content-padding;
 }
 
-.page-header {
-	padding: $content-padding * 2 $content-padding;
-	background: transparent url(https://upload.wikimedia.org/wikipedia/commons/7/77/CSGO.jpg) fixed center center no-repeat;
-	background-size: cover;
-}
-
-// Cards
-$entry-height: 25px;
-.card-list {
-	min-height: 150vh;
-	width: 100%;
-	margin-top: $content-padding;
-	padding: 0;
-	border-collapse: collapse;
-
-	td {
-		padding: 0;
-		height: $entry-height;
-		line-height: $entry-height;
-	}
-
-	.padding {
-		width: $content-padding;
-	}
-
-	thead tr {
-		border-bottom: 1px solid $nav-background-color;
-	}
-
-	th {
-		text-align: left;
-	}
-
-	.descr, .join, .full, .hide {
-		color: $link-color;
-		cursor: pointer;
-
-		&:hover {
-			color: $link-color-active;
-		}
-	}
-
-	.join, .full, .hide {
-		width: 40px;
-		font-size: 20px;
-		text-align: center;
-	}
-
-
-	tbody tr:hover {
-		background-color: $body-background-color-active;
-	}
-}

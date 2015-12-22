@@ -1,5 +1,44 @@
+#landing-banner {
+  padding: 70px 0 170px 0;
+  background: transparent url(https://upload.wikimedia.org/wikipedia/commons/7/77/CSGO.jpg) fixed center center no-repeat;
+  background-size: cover; }
+  #landing-banner > div {
+    display: inline-block;
+    padding: 10px 100px;
+    background-color: rgba(0, 0, 0, 0.5); }
+
 #lobby-linker {
   display: none; }
+
+.card-list {
+  padding: 25px 80px; }
+  .card-list > div {
+    display: flex;
+    flex-wrap: nowrap; }
+    .card-list > div div {
+      padding: 10px;
+      margin: 5px 10px;
+      background-color: #1a1f05;
+      box-shadow: 2px 2px 5px 0 #110815;
+      white-space: nowrap; }
+  .card-list .title, .card-list .join, .card-list .full, .card-list .hide {
+    color: #7c9b1f;
+    cursor: pointer; }
+    .card-list .title:hover, .card-list .join:hover, .card-list .full:hover, .card-list .hide:hover {
+      color: #aed82a; }
+  .card-list .age {
+    width: 50px;
+    text-align: center; }
+  .card-list .title {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .card-list .join::before {
+    content: 'Join'; }
+  .card-list .full::before {
+    content: 'Full'; }
+  .card-list .hide::before {
+    content: 'Hide'; }
 
 * {
   font-family: Raleway, Palatino, serif;
@@ -25,43 +64,13 @@ a {
   a:hover, a:active {
     color: #aed82a; }
 
-.page-header {
-  padding: 90px 45px;
-  background: transparent url(https://upload.wikimedia.org/wikipedia/commons/7/77/CSGO.jpg) fixed center center no-repeat;
-  background-size: cover; }
-
-.card-list {
-  min-height: 150vh;
-  width: 100%;
-  margin-top: 45px;
-  padding: 0;
-  border-collapse: collapse; }
-  .card-list td {
-    padding: 0;
-    height: 25px;
-    line-height: 25px; }
-  .card-list .padding {
-    width: 45px; }
-  .card-list thead tr {
-    border-bottom: 1px solid #110815; }
-  .card-list th {
-    text-align: left; }
-  .card-list .descr, .card-list .join, .card-list .full, .card-list .hide {
-    color: #7c9b1f;
-    cursor: pointer; }
-    .card-list .descr:hover, .card-list .join:hover, .card-list .full:hover, .card-list .hide:hover {
-      color: #aed82a; }
-  .card-list .join, .card-list .full, .card-list .hide {
-    width: 40px;
-    font-size: 20px;
-    text-align: center; }
-  .card-list tbody tr:hover {
-    background-color: #36420c; }
+.section {
+  padding: 100px; }
 
 nav {
   display: block;
   background-color: #110815;
-  padding-left: 45px; }
+  padding-left: 100px; }
 
 .nav-main {
   list-style: none; }

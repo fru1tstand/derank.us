@@ -1,0 +1,63 @@
+#landing-banner {
+	padding: 70px 0 170px 0;
+	background: transparent url(https://upload.wikimedia.org/wikipedia/commons/7/77/CSGO.jpg) fixed center center no-repeat;
+	background-size: cover;
+
+	> div {
+		display: inline-block;
+		padding: 10px $content-padding;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}
+
+#lobby-linker {
+	display: none;
+}
+
+// Cards
+$card-padding: 20px;
+.card-list {
+	padding: $content-padding/4 ($content-padding - $card-padding);
+
+	> div {
+		display: flex;
+		flex-wrap: nowrap;
+
+		div {
+			padding: $card-padding/2;
+			margin: $card-padding/4 $card-padding/2;
+			background-color: $body-background-color-alt;
+			box-shadow: 2px 2px 5px 0 $nav-background-color;
+			white-space: nowrap;
+		}
+	}
+
+	.title, .join, .full, .hide {
+		color: $link-color;
+		cursor: pointer;
+
+		&:hover {
+			color: $link-color-active;
+		}
+	}
+
+	.age {
+		width: 50px;
+		text-align: center;
+	}
+	.title {
+		flex-grow: 1;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.join::before {
+		content: 'Join';
+	}
+	.full::before {
+		content: 'Full';
+	}
+	.hide::before {
+		content: 'Hide';
+	}
+}

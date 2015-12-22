@@ -6,35 +6,23 @@ use csgoderank\html\template\LobbyCard;
 use csgoderank\html\template\StaticPage;
 
 
-$cardContent = LobbyCard::createContentsFromQuery(Queries::getSelectUniqueLobbiesQuery(30));
-$cardHtml = "";
+$cardContent = LobbyCard::createContentsFromQuery(Queries::getSelectUniqueLobbiesQuery(10));
+$cardHtml = (count($cardContent) > 0) ? "" : "<tr><td>No active lobbies found. Consider making one!</td></tr>";
 foreach ($cardContent as $content) {
 	$cardHtml .= $content->getRenderContents();
 }
 
 $body = <<<HTML
-<div class="page-header">
-	<h1>Derank.Us</h1>
-	<div class="hint">Find lobbies, get silver.</div>
+<div id="landing-banner">
+	<div>
+		<h1>Derank.Us</h1>
+		<p class="hint">Find Lobbies. Get Silver.</p>
+	</div>
 </div>
 
-<table class="card-list">
-	<thead>
-		<tr>
-			<th class="padding"></th>
-			<th>Description</th>
-			<th>Host</th>
-			<th>Age</th>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th class="padding"></th>
-		</tr>
-	</thead>
-	<tbody>
-		$cardHtml
-	</tbody>
-</table>
+<div class="card-list">
+	$cardHtml
+</div>
 
 <iframe id="lobby-linker"></iframe>
 <script>
