@@ -1,11 +1,14 @@
+#lobby-linker {
+  display: none; }
+
 * {
   font-family: Raleway, Palatino, serif;
   box-sizing: border-box; }
 
 body, html {
   height: 100%;
-  background-color: #EEE;
-  color: #535353; }
+  background-color: #111504;
+  color: #b6b6b6; }
 
 body, html,
 h1, h2, h3, h4, h5, h6,
@@ -17,93 +20,63 @@ fieldset, legend, input, button {
 
 a {
   text-decoration: none; }
-
-#global-content {
-  padding-left: 350px; }
+  a:link, a:visited {
+    color: #7c9b1f; }
+  a:hover, a:active {
+    color: #aed82a; }
 
 .page-header {
-  padding: 80px 20px; }
+  padding: 90px 45px;
+  background: transparent url(https://upload.wikimedia.org/wikipedia/commons/7/77/CSGO.jpg) fixed center center no-repeat;
+  background-size: cover; }
 
-.section {
-  border-bottom: 1px solid #DDD;
-  padding: 0 20px; }
-
-.card {
-  display: inline-block;
-  vertical-align: top;
-  padding: 20px 10px;
-  margin: 10px;
-  font-size: 14px;
-  width: 500px;
-  background: -moz-linear-gradient(left, #e9e9e9 0%, rgba(236, 236, 236, 0) 50%, rgba(238, 238, 238, 0) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #e9e9e9 0%, rgba(236, 236, 236, 0) 50%, rgba(238, 238, 238, 0) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #e9e9e9 0%, rgba(236, 236, 236, 0) 50%, rgba(238, 238, 238, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9e9e9', endColorstr='#00eeeeee',GradientType=1 );
-  /* IE6-9 */ }
-  .card .title {
-    font-weight: bold;
-    margin-bottom: -5px; }
-  .card .host, .card .time {
-    display: inline-block;
-    font-size: 12px;
-    color: #999; }
-  .card .host::before {
-    content: 'by '; }
-  .card .time::before {
-    content: 'Posted '; }
-  .card .time::after {
-    content: ' '; }
-  .card .lobby-link, .card .buttons {
-    margin-top: 14px; }
-  .card .lobby-link a, .card .lobby-link a:link, .card .lobby-link a:visited {
-    font-size: 12px;
-    color: #57bbff; }
-  .card .lobby-link a:hover, .card .lobby-link a:active {
-    color: #55a8e9; }
-  .card .button {
-    display: inline-block;
-    border-radius: 2px;
-    color: #EEE; }
-    .card .button::before {
-      display: block;
-      padding: 0 10px; }
-  .card .button-join:link, .card .button-join:visited {
-    background-color: #57bbff; }
-  .card .button-join:hover, .card .button-join:active {
-    background-color: #55a8e9; }
-  .card .button-join::before {
-    content: "Quick Join"; }
-  .card .button-full:link, .card .button-full:visited {
-    background-color: #ff4c34; }
-  .card .button-full:hover, .card .button-full:active {
-    background-color: #d1432e; }
-  .card .button-full::before {
-    content: "Mark as Full"; }
+.card-list {
+  min-height: 150vh;
+  width: 100%;
+  margin-top: 45px;
+  padding: 0;
+  border-collapse: collapse; }
+  .card-list td {
+    padding: 0;
+    height: 25px;
+    line-height: 25px; }
+  .card-list .padding {
+    width: 45px; }
+  .card-list thead tr {
+    border-bottom: 1px solid #110815; }
+  .card-list th {
+    text-align: left; }
+  .card-list .descr, .card-list .join, .card-list .full, .card-list .hide {
+    color: #7c9b1f;
+    cursor: pointer; }
+    .card-list .descr:hover, .card-list .join:hover, .card-list .full:hover, .card-list .hide:hover {
+      color: #aed82a; }
+  .card-list .join, .card-list .full, .card-list .hide {
+    width: 40px;
+    font-size: 20px;
+    text-align: center; }
+  .card-list tbody tr:hover {
+    background-color: #36420c; }
 
 nav {
   display: block;
-  height: 100%;
-  width: 350px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #E9E9E9; }
-
-.nav-header {
-  height: 100px;
-  padding: 20px; }
+  background-color: #110815;
+  padding-left: 45px; }
 
 .nav-main {
   list-style: none; }
-  .nav-main a, .nav-main a:link, .nav-main a:visited {
+  .nav-main li {
+    display: inline-block; }
+  .nav-main span {
     display: block;
-    padding: 8px 20px;
-    color: #333; }
-  .nav-main a:hover, .nav-main a:active {
-    background-color: #DDD; }
+    cursor: default;
+    padding-right: 20px;
+    color: #7c9b1f;
+    font-weight: bold; }
+  .nav-main a {
+    height: 55px;
+    line-height: 55px;
+    display: block;
+    padding: 0 20px; }
 
 /*# sourceMappingURL=global.css.map */

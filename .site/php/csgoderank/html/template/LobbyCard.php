@@ -9,10 +9,15 @@ use common\template\Content;
  * Class LobbyCard
  */
 class LobbyCard extends Content {
+	const FIELD_DB_ID = "id";
+	const FIELD_LOBBY_ID = "lobby_id";
+	const FIELD_DISPLAY_NAME = "display_name";
+	const FIELD_POST_DATE = "post_date";
+	const FIELD_PROFILE_ID = "profile_id";
 	const FIELD_TITLE = "title";
-	const FIELD_HOST = "host";
-	const FIELD_LOBBY_LINK = "lobby-link";
-	const FIELD_TITLE_DEFAULT = "[No Description]";
+
+	const DEFAULT_DISPLAY_NAME = "[Unknown]";
+	const DEFAULT_TITLE = "[No Description]";
 
 
 	/**
@@ -23,18 +28,16 @@ class LobbyCard extends Content {
 	 */
 	public static function getTemplateRenderContents(array $fields): string {
 		return <<<HTML
-<div class="card">
-	<div class="title">{$fields[self::FIELD_TITLE]}</div>
-	<div class="time">3 minutes ago</div>
-	<div class="host">{$fields[self::FIELD_HOST]}</div>
-	<div class="lobby-link">
-		<a href="{$fields[self::FIELD_LOBBY_LINK]}">{$fields[self::FIELD_LOBBY_LINK]}</a>
-	</div>
-	<div class="buttons">
-		<a href="#" class="button button-join"></a>
-		<a href="#" class="button button-full"></a>
-	</div>
-</div>
+<tr data-db-id="{$fields[self::FIELD_DB_ID]}">
+	<td class="padding"></td>
+	<td class="descr">{$fields[self::FIELD_TITLE]}</td>
+	<td class="host">{$fields[self::FIELD_DISPLAY_NAME]}</td>
+	<td class="age">{$fields[self::FIELD_POST_DATE]}</td>
+	<td class="join"><i class="fa fa-external-link-square"></i></td>
+	<td class="full"><i class="fa fa-ban"></i></td>
+	<td class="hide"><i class="fa fa-times"></i></td>
+	<td class="padding"></td>
+</tr>
 HTML;
 	}
 
@@ -50,15 +53,25 @@ HTML;
 	static function getTemplateFields_Internal(): array {
 		return [
 			TemplateField::newBuilder()
-					->called(self::FIELD_HOST)
-					->asRequired()->build(),
+				->called(self::FIELD_DB_ID)
+				->asRequired()->build(),
 			TemplateField::newBuilder()
-					->called(self::FIELD_LOBBY_LINK)
-					->asRequired()->build(),
+				->called(self::FIELD_LOBBY_ID)
+				->asRequired()->build(),
 			TemplateField::newBuilder()
-					->called(self::FIELD_TITLE)
-					->asNotRequired()
-					->defaultingTo(self::FIELD_TITLE_DEFAULT)->build()
+				->called(self::FIELD_DISPLAY_NAME)
+				->asNotRequired()
+				->defaultingTo(self::DEFAULT_DISPLAY_NAME)->build(),
+			TemplateField::newBuilder()
+				->called(self::FIELD_POST_DATE)
+				->asRequired()->build(),
+			TemplateField::newBuilder()
+				->called(self::FIELD_PROFILE_ID)
+				->asRequired()->build(),
+			TemplateField::newBuilder()
+				->called(self::FIELD_TITLE)
+				->asNotRequired()
+				->defaultingTo(self::DEFAULT_TITLE)->build()
 		];
 	}
 

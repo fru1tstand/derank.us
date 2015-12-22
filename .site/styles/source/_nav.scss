@@ -1,29 +1,26 @@
 nav {
 	display: block;
-	height: 100%;
-	width: $nav-width;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
 	background-color: $nav-background-color;
-}
-.nav-header {
-	height: 100px;
-	padding: $content-padding;
+	padding-left: $content-padding;
 }
 
 .nav-main {
 	list-style: none;
+	li {
+		display: inline-block;
+	}
 
+	span {
+		display: block;
+		cursor: default;
+		padding-right: 20px;
+		color: $link-color;
+		font-weight: bold;
+	}
 	a {
-		&, &:link, &:visited {
-			display: block;
-			padding: 8px $content-padding;
-			color: $nav-link-color;
-		}
-		&:hover, &:active {
-			background-color: $nav-link-active-background-color;
-		}
+		height: $nav-height;
+		line-height: $nav-height;
+		display: block;
+		padding: 0 20px;
 	}
 }

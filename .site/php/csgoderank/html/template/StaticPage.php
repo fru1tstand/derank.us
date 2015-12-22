@@ -23,24 +23,23 @@ class StaticPage extends Content {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>CSGO Derank</title>
+	<title>Derank.Us {$fields[self::FIELD_TITLE]}</title>
 	<meta charset="UTF-8" />
 
-	<link rel="shortcut icon" href="https://s3.amazonaws.com/ks_web/fru1t.me/favicon.ico" />
+	<!--<link rel="shortcut icon" href="https://s3.amazonaws.com/ks_web/fru1t.me/favicon.ico" />-->
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400,600'>
+	<!--<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400,600'>-->
+	<link rel="stylesheet" href="/.site/styles/cache/raleway.css" />
 	<link rel="stylesheet" href="/.site/styles/compiled/global.css" />
 </head>
 
 <body>
 	<nav>
-		<div class="nav-header">
-			CSGO Derank Lobbies
-			{$fields[self::FIELD_TITLE]}
-		</div>
 		<ul class="nav-main">
+			<li><span>Derank.Us</span></li>
 			<li><a href="/home">Home</a></li>
-			<li><a href="/about">About</a></li>
+			<li><a href="/info">Info</a></li>
 			<li><a href="/code">Source Code</a></li>
 		</ul>
 	</nav>
