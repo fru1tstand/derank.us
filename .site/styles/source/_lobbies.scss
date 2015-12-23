@@ -29,6 +29,7 @@ $card-padding: 20px;
 			background-color: $body-background-color-alt;
 			box-shadow: 2px 2px 5px 0 $nav-background-color;
 			white-space: nowrap;
+			flex-shrink: 0;
 		}
 	}
 
@@ -46,9 +47,10 @@ $card-padding: 20px;
 		text-align: center;
 	}
 	.title {
+		line-height: normal;
 		flex-grow: 1;
-		overflow: hidden;
-		text-overflow: ellipsis;
+		flex-shrink: 1;
+		white-space: normal;
 	}
 
 	.join::before {

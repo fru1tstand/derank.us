@@ -1,13 +1,19 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
 use common\base\Http;
+use csgoderank\database\Queries;
 
 define("LOBBY_ID_PARAM", "lobbyid");
 
-$lobbyId = Http::getPostParamValue(LOBBY_ID_PARAM);
+$lobbyId = Http::getGetParamValue(LOBBY_ID_PARAM);
 if ($lobbyId == null) {
 	exit;
 }
 
+$id = Queries::selectLobbyIdFromDbId($lobbyId);
+header("Location: steam://joinlobby/730/$id");
 
-header('Location: steam://joinlobby/730/109775242595228101/76561198147978524');
+?>
+<!--<script>-->
+<!--	window.parent.thing();-->
+<!--</script>-->

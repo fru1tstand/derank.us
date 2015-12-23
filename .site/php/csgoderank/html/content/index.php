@@ -25,19 +25,8 @@ $body = <<<HTML
 </div>
 
 <iframe id="lobby-linker"></iframe>
-<script>
-(function() {
-	function joinLobby() {
-	console.log("asdf");
-		var iFrame = document.getElementById('lobby-linker');
-		iFrame.src = "/getlink";
-	}
-	var joins = document.getElementsByClassName('join');
-	for (var i = 0; i < joins.length; i++) {
-		joins[i].onclick = joinLobby;
-	}
-} ())
-</script>
+
+<script src="/.site/js/lobby-linker.js"></script>
 HTML;
 
 StaticPage::createContent()

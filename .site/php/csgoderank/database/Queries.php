@@ -1,6 +1,8 @@
 <?php
 namespace csgoderank\database;
 require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
+use common\mysql\MySQL;
+use common\mysql\QueryBuilder;
 use csgoderank\html\template\LobbyCard;
 
 class Queries {
@@ -32,5 +34,20 @@ class Queries {
 				) AS unique_lobbies
 				INNER JOIN lobby_post ON lobby_post.id = unique_lobbies.id
 				ORDER BY post_date DESC";
+	}
+
+	/**
+	 * Returns the lobby_id associated to the lobby_post.id value.
+	 *
+	 * @param int $dbId
+	 * @return string
+	 * @throws \Exception
+	 */
+	public static function selectLobbyIdFromDbId(int $dbId): string {
+		return MySQL::newQueryBuilder()
+			->withQuery("SELECT `lobby_id` FROM `lobby_post` WHERE `id` = ?")
+			->withParam($dbId, QueryBuilder::PARAM_TYPE_INT)
+			->build()
+			->getResultValue();
 	}
 }

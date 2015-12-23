@@ -20,7 +20,8 @@
       margin: 5px 10px;
       background-color: #1a1f05;
       box-shadow: 2px 2px 5px 0 #110815;
-      white-space: nowrap; }
+      white-space: nowrap;
+      flex-shrink: 0; }
   .card-list .title, .card-list .join, .card-list .full, .card-list .hide {
     color: #7c9b1f;
     cursor: pointer; }
@@ -30,9 +31,10 @@
     width: 50px;
     text-align: center; }
   .card-list .title {
+    line-height: normal;
     flex-grow: 1;
-    overflow: hidden;
-    text-overflow: ellipsis; }
+    flex-shrink: 1;
+    white-space: normal; }
   .card-list .join::before {
     content: 'Join'; }
   .card-list .full::before {
