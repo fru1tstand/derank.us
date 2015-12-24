@@ -3,6 +3,8 @@ namespace csgoderank\database;
 require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
 use common\mysql\MySQL;
 use common\mysql\QueryBuilder;
+use common\session\Session;
+use csgoderank\feature\HiddenLobby;
 use csgoderank\html\template\LobbyCard;
 
 class Queries {
@@ -14,7 +16,10 @@ class Queries {
 	 * @return string
 	 */
 	public static function getSelectUniqueLobbiesQuery(int $minutes): string {
-		LobbyCard::FIELD_DISPLAY_NAME;
+		$hiddenLobbies = implode(", ", array_keys(HiddenLobby::get()));
+		if ($hiddenLobbies == "") {
+			$hiddenLobbies = "0";
+		}
 		return "
 				SELECT
 					`unique_lobbies`.`id` AS ". LobbyCard::FIELD_DB_ID .",
@@ -30,6 +35,7 @@ class Queries {
 						(`post_date` + 60 * $minutes) > UNIX_TIMESTAMP()
 						AND `lobby_id` <> 0
 						AND `profile_id` <> 0
+						AND `lobby_id` NOT IN ($hiddenLobbies)
 					GROUP BY lobby_id
 				) AS unique_lobbies
 				INNER JOIN lobby_post ON lobby_post.id = unique_lobbies.id
