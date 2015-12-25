@@ -24,9 +24,10 @@ $body = <<<HTML
 	$cardHtml
 </div>
 
-<iframe id="lobby-linker"></iframe>
+<iframe class="hidden" id="lobby-linker"></iframe>
 
-<script src="/.site/js/lobby-linker.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/.site/php/csgoderank/js/index.php"></script>
 HTML;
 
 StaticPage::createContent()

@@ -32,8 +32,4 @@
 	for (var i = 0; i < hideEls.length; i++) {
 		hideEls[i].onclick = hideLobby;
 	}
-
-	window.thing = function() {
-		alert("thing happened");
-	}
 } ());
