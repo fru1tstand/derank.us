@@ -12,8 +12,3 @@ if ($lobbyId == null) {
 
 $id = Queries::selectLobbyIdFromDbId($lobbyId);
 header("Location: steam://joinlobby/730/$id");
-
-?>
-<!--<script>-->
-<!--	window.parent.thing();-->
-<!--</script>-->
