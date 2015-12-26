@@ -2,6 +2,10 @@
 	font-family: Raleway, Palatino, serif;
 	box-sizing: border-box;
 }
+pre {
+	font-family: monospace;
+}
+
 
 body, html {
 	height: 100%;
@@ -29,10 +33,35 @@ a {
 	}
 }
 
-.section {
-	padding: $content-padding;
-}
-
 .hidden {
 	display: none;
+}
+
+$section-left-border: 6px;
+$section-left-spacing: 18px;
+.section {
+	margin: 75px $content-padding 0 ($content-padding - $section-left-border - $section-left-spacing);
+	border-left: $section-left-border solid $link-color;
+	padding-left: $section-left-spacing;
+}
+
+.section-sm {
+	margin: 45px $content-padding 0 ($content-padding - $section-left-border/2 - $section-left-spacing);
+	border-left: $section-left-border/2 solid $link-color;
+	padding-left: $section-left-spacing;
+}
+.block-text {
+	max-width: 800px;
+}
+.container {
+	margin: 0 $content-padding;
+}
+
+.kodleesharenet {
+	&::before {
+		content: '@';
+	}
+	&::after {
+		content: 'kodleeshare';
+	}
 }
