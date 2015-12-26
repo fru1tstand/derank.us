@@ -10,11 +10,8 @@ nav {
 		display: inline-block;
 	}
 
-	span {
-		display: block;
-		cursor: default;
-		padding-right: 20px;
-		color: $link-color;
+	.logo {
+		padding-left: 0;
 		font-weight: bold;
 	}
 	a {

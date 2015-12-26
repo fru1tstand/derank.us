@@ -1,3 +1,20 @@
 .info-push {
 	height: 100px;
 }
+
+.block {
+	display: inline-block;
+	margin-right: 20px;
+	height: 30px;
+	width: 30px;
+
+	&.red {
+		background-color: #F00;
+	}
+	&.green {
+		background-color: #0F0;
+	}
+	&.blue {
+		background-color: #00F;
+	}
+}

@@ -99,11 +99,8 @@ nav {
   list-style: none; }
   .nav-main li {
     display: inline-block; }
-  .nav-main span {
-    display: block;
-    cursor: default;
-    padding-right: 20px;
-    color: #7c9b1f;
+  .nav-main .logo {
+    padding-left: 0;
     font-weight: bold; }
   .nav-main a {
     height: 55px;
@@ -113,5 +110,17 @@ nav {
 
 .info-push {
   height: 100px; }
+
+.block {
+  display: inline-block;
+  margin-right: 20px;
+  height: 30px;
+  width: 30px; }
+  .block.red {
+    background-color: #F00; }
+  .block.green {
+    background-color: #0F0; }
+  .block.blue {
+    background-color: #00F; }
 
 /*# sourceMappingURL=global.css.map */
