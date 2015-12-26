@@ -51,6 +51,8 @@ class StaticPage extends Content {
 		<a href="/">Derank.Us</a> powered by <a href="http://fru1t.me" target="_blank">Fru1t.Me</a>
 		<div class="right">Made with love, By Kodlee Yin.</div>
 	</footer>
+
+	<!--<script src="/.site/js/analytics.js"></script>-->
 </body>
 </html>
 HTML;

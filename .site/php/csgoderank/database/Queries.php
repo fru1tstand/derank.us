@@ -3,7 +3,6 @@ namespace csgoderank\database;
 require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
 use common\mysql\MySQL;
 use common\mysql\QueryBuilder;
-use common\session\Session;
 use csgoderank\feature\HiddenLobby;
 use csgoderank\html\template\LobbyCard;
 
@@ -46,10 +45,10 @@ class Queries {
 	 * Returns the lobby_id associated to the lobby_post.id value.
 	 *
 	 * @param int $dbId
-	 * @return string
+	 * @return string | null
 	 * @throws \Exception
 	 */
-	public static function selectLobbyIdFromDbId(int $dbId): string {
+	public static function selectLobbyIdFromDbId(int $dbId) {
 		return MySQL::newQueryBuilder()
 			->withQuery("SELECT `lobby_id` FROM `lobby_post` WHERE `id` = ?")
 			->withParam($dbId, QueryBuilder::PARAM_TYPE_INT)
