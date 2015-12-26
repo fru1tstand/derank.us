@@ -1,6 +1,6 @@
 #landing-banner {
   padding: 70px 0 170px 0;
-  background: transparent url(https://upload.wikimedia.org/wikipedia/commons/7/77/CSGO.jpg) fixed center center no-repeat;
+  background: transparent url(https://s3.amazonaws.com/ks_web/derank.us/iso-overpass.gif) fixed center center no-repeat;
   background-size: cover; }
   #landing-banner > div {
     display: inline-block;
@@ -51,6 +51,21 @@ body, html {
   background-color: #111504;
   color: #b6b6b6; }
 
+#content-wrapper {
+  min-height: 100%;
+  margin-bottom: -40px; }
+
+#content-push, footer {
+  height: 40px; }
+
+footer {
+  background-color: #110815;
+  font-size: 12px;
+  padding: 0 100px;
+  line-height: 40px; }
+  footer .right {
+    float: right; }
+
 body, html,
 h1, h2, h3, h4, h5, h6,
 ul, li, ol,
@@ -65,6 +80,9 @@ a {
     color: #7c9b1f; }
   a:hover, a:active {
     color: #aed82a; }
+
+.right {
+  text-align: right; }
 
 .hidden {
   display: none; }

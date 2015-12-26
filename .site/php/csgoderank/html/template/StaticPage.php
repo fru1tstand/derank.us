@@ -33,17 +33,24 @@ class StaticPage extends Content {
 </head>
 
 <body>
-	<nav>
-		<ul class="nav-main">
-			<li><a href="/home" class="logo">Derank.Us</a></li>
-			<li><a href="/home">Home</a></li>
-			<li><a href="/tips">Tips</a></li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/source">Source Code</a></li>
-		</ul>
-	</nav>
+	<div id="content-wrapper">
+		<nav>
+			<ul class="nav-main">
+				<li><a href="/home" class="logo">Derank.Us</a></li>
+				<li><a href="/home">Home</a></li>
+				<li><a href="/tips">Tips</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/source">Source Code</a></li>
+			</ul>
+		</nav>
 
-	<div id="global-content">{$fields[self::FIELD_BODY]}</div>
+		<div id="global-content">{$fields[self::FIELD_BODY]}</div>
+		<div id="content-push"></div>
+	</div>
+	<footer>
+		<a href="/">Derank.Us</a> powered by <a href="http://fru1t.me" target="_blank">Fru1t.Me</a>
+		<div class="right">Made with love, By Kodlee Yin.</div>
+	</footer>
 </body>
 </html>
 HTML;

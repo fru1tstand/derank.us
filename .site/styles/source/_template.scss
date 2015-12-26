@@ -12,6 +12,24 @@ body, html {
 	background-color: $body-background-color;
 	color: $body-color;
 }
+$footer-height: 40px;
+#content-wrapper {
+	min-height: 100%;
+	margin-bottom: -$footer-height;
+}
+#content-push, footer {
+	height: $footer-height;
+}
+footer {
+	background-color: $nav-background-color;
+	font-size: 12px;
+	padding: 0 $content-padding;
+	line-height: $footer-height;
+
+	.right {
+		float: right;
+	}
+}
 
 body, html,
 h1, h2, h3, h4, h5, h6,
@@ -31,6 +49,10 @@ a {
 	&:hover, &:active {
 		color: $link-color-active;
 	}
+}
+
+.right {
+	text-align: right;
 }
 
 .hidden {
