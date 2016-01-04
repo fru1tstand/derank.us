@@ -28,17 +28,17 @@ class LobbyCard extends Content {
 	 * @return string
 	 */
 	public static function getTemplateRenderContents(array $fields): string {
-		$time = round((time() - $fields[self::FIELD_POST_DATE]->getContent()) / 60) - 1;
+		$time = round((time() - $fields[self::FIELD_POST_DATE]->getContent()) / 60);
 		$title = htmlentities($fields[self::FIELD_TITLE]);
 		$displayName = htmlentities($fields[self::FIELD_DISPLAY_NAME]);
 		$timeoutTime = HiddenLobby::TIMEOUT_MINUTES;
 		return <<<HTML
 <div data-db-id="{$fields[self::FIELD_DB_ID]}">
 	<div class="age" title="Posted {$time} minute(s) ago">{$time}</div>
-	<div class="title">{$title}</div>
+	<div class="title button">{$title}</div>
 	<div class="host" title="Posted by {$displayName}">{$displayName}</div>
-	<div class="join" title="Join lobby"></div>
-	<div class="hide" title="Hide lobby for the next $timeoutTime minutes"></div>
+	<div class="join button" title="Join lobby"></div>
+	<div class="hide button" title="Hide lobby for the next $timeoutTime minutes"></div>
 </div>
 HTML;
 	}

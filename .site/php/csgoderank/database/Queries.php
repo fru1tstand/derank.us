@@ -38,6 +38,7 @@ class Queries {
 					GROUP BY lobby_id
 				) AS unique_lobbies
 				INNER JOIN lobby_post ON lobby_post.id = unique_lobbies.id
+				WHERE fn_is_lobby_active(`unique_lobbies`.`id`) = 1
 				ORDER BY post_date DESC";
 	}
 

@@ -9,27 +9,33 @@
 	function hideLobby() {
 		document.getElementById('lobby-linker').src =
 				"/hide?id=" + this.parentElement.dataset.dbId;
-		var cardContainer = this.parentElement.parentElement;
-		cardContainer.removeChild(this.parentElement);
-		if (cardContainer.children.length == 0) {
-			cardContainer.innerHTML = "No active lobbies found. Consider making one!";
-		}
+		this.parentElement.parentElement.removeChild(this.parentElement);
+		checkNoLobbies();
+	}
+
+	function checkNoLobbies() {
+		var noLobbies = document.getElementById('no-lobbies');
+		var lobbies = document.getElementById('card-list');
+
+		noLobbies.style.display = ((lobbies.children.length == 0) ? 'block' : 'none');
 	}
 
 	// Title linking
-	var titleEls = document.querySelectorAll('.card-list .title');
+	var titleEls = document.querySelectorAll('#card-list .title');
 	for (var i = 0; i < titleEls.length; i++) {
 		titleEls[i].onclick = joinLobbyClick;
 	}
 
 	// Join button linking
-	var joinEls = document.querySelectorAll('.card-list .join');
+	var joinEls = document.querySelectorAll('#card-list .join');
 	for (var i = 0; i < joinEls.length; i++) {
 		joinEls[i].onclick = joinLobbyClick;
 	}
 
-	var hideEls = document.querySelectorAll('.card-list .hide');
+	var hideEls = document.querySelectorAll('#card-list .hide');
 	for (var i = 0; i < hideEls.length; i++) {
 		hideEls[i].onclick = hideLobby;
 	}
+
+	checkNoLobbies();
 } ());

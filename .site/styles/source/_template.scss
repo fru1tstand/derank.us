@@ -87,3 +87,17 @@ $section-left-spacing: 18px;
 		content: 'kodleeshare';
 	}
 }
+
+.controller {
+	display: none;
+}
+.controller-label {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.card-button {
+	background-color: $body-background-color-alt;
+	box-shadow: 2px 2px 5px 0 $nav-background-color;
+}

@@ -31,7 +31,7 @@ class Analytics {
 				->withParam($_SERVER['HTTP_USER_AGENT'], QueryBuilder::PARAM_TYPE_STRING)
 				->withParam(time(), QueryBuilder::PARAM_TYPE_INT)
 				->withParam($_SERVER['REMOTE_ADDR'], QueryBuilder::PARAM_TYPE_STRING)
-				->withParam("/getlink", QueryBuilder::PARAM_TYPE_STRING)
+				->withParam($_SERVER['REQUEST_URI'], QueryBuilder::PARAM_TYPE_STRING)
 				->withParam($lobbyId, QueryBuilder::PARAM_TYPE_INT)
 				->build();
 	}

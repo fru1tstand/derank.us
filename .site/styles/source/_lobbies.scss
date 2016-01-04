@@ -10,26 +10,44 @@
 	}
 }
 
+#no-lobbies {
+	padding: 0 $content-padding;
+}
+
+#new-lobby-input {
+	padding: 4px 0;
+	background-color: $body-background-color-alt;
+	color: $body-color;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid $body-background-color-active;
+	margin-bottom: 4px;
+}
+
+.lobby-spacer {
+	height: 50px;
+	clear: both;
+}
+
 // Cards
 $card-padding: 20px;
 .card-list {
-	padding: $content-padding/4 ($content-padding - $card-padding);
+	padding: 0 ($content-padding - $card-padding/4);
 
 	> div {
 		display: flex;
 		flex-wrap: nowrap;
 
 		div {
+			@extend .card-button;
 			padding: $card-padding/2;
-			margin: $card-padding/4 $card-padding/2;
-			background-color: $body-background-color-alt;
-			box-shadow: 2px 2px 5px 0 $nav-background-color;
+			margin: $card-padding/4 $card-padding/4;
 			white-space: nowrap;
 			flex-shrink: 0;
 		}
 	}
 
-	.title, .join, .full, .hide {
+	.button {
 		color: $link-color;
 		cursor: pointer;
 
@@ -57,5 +75,44 @@ $card-padding: 20px;
 	}
 	.hide::before {
 		content: 'Hide';
+	}
+}
+
+.lobby-card-buttons {
+	padding: 0 ($content-padding - $card-padding/4);
+
+	.button {
+		@extend .card-button;
+		display: inline-block;
+		cursor: pointer;
+		color: $link-color;
+		padding: $card-padding / 2 $card-padding;
+		margin: $card-padding/4 $card-padding/4;
+		float: right;
+
+		&:hover {
+			color: $link-color-active;
+		}
+	}
+}
+
+.lobby-controllers {
+	padding: 0 $content-padding;
+	> div {
+		@extend .card-button;
+		padding: $card-padding;
+	}
+
+	.lobby-controller-link {
+		cursor: pointer;
+		color: $link-color;
+		display: inline-block;
+		margin-right: $card-padding;
+		background-color: transparent;
+		border: none;
+
+		&:hover {
+			color: $link-color-active;
+		}
 	}
 }

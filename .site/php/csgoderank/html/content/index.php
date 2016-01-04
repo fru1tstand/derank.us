@@ -7,7 +7,7 @@ use csgoderank\html\template\StaticPage;
 
 
 $cardContent = LobbyCard::createContentsFromQuery(Queries::getSelectUniqueLobbiesQuery(10));
-$cardHtml = (count($cardContent) > 0) ? "" : "<tr><td>No active lobbies found. Consider making one!</td></tr>";
+$cardHtml = "";
 foreach ($cardContent as $content) {
 	$cardHtml .= $content->getRenderContents();
 }
@@ -20,13 +20,39 @@ $body = <<<HTML
 	</div>
 </div>
 
-<div class="card-list">
-	$cardHtml
+<div class="lobby-spacer"></div>
+<div class="lobby-controllers" id="post-lobby-link-container" style="display: none">
+	<form action="#">
+		<div>
+			<input type="text" id="new-lobby-input" placeholder="Post a lobby link and description" />
+		</div>
+		<div>
+			<button class="lobby-controller-link" type="submit">Submit</button>
+			<button class="lobby-controller-link" type="reset">Cancel</button>
+		</div>
+	</form>
+</div>
+<div class="card-list" id="post-lobby-link-edit">
+	<div>
+		<div class="age">0</div>
+		<div class="title">title</div>
+		<div class="button" id="post-lobby-bump">Bump</div>
+		<div class="button" id="post-lobby-close">Delete</div>
+	</div>
 </div>
 
+<div class="lobby-spacer"></div>
+<div class="card-list" id="card-list">
+	$cardHtml
+</div>
+<div id="no-lobbies" style="display: none;">No active lobbies found. Consider making one!</div>
+<div class="lobby-card-buttons">
+	<div class="button" id="reset-hidden-lobbies-button">Reset Hidden Lobbies</div>
+</div>
+
+<div class="lobby-spacer"></div>
 <iframe class="hidden" id="lobby-linker"></iframe>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="/.site/php/csgoderank/js/index.php"></script>
 HTML;
 

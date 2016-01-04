@@ -7,22 +7,36 @@
     padding: 10px 100px;
     background-color: rgba(0, 0, 0, 0.5); }
 
+#no-lobbies {
+  padding: 0 100px; }
+
+#new-lobby-input {
+  padding: 4px 0;
+  background-color: #1a1f05;
+  color: #b6b6b6;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #36420c;
+  margin-bottom: 4px; }
+
+.lobby-spacer {
+  height: 50px;
+  clear: both; }
+
 .card-list {
-  padding: 25px 80px; }
+  padding: 0 95px; }
   .card-list > div {
     display: flex;
     flex-wrap: nowrap; }
     .card-list > div div {
       padding: 10px;
-      margin: 5px 10px;
-      background-color: #1a1f05;
-      box-shadow: 2px 2px 5px 0 #110815;
+      margin: 5px 5px;
       white-space: nowrap;
       flex-shrink: 0; }
-  .card-list .title, .card-list .join, .card-list .full, .card-list .hide {
+  .card-list .button {
     color: #7c9b1f;
     cursor: pointer; }
-    .card-list .title:hover, .card-list .join:hover, .card-list .full:hover, .card-list .hide:hover {
+    .card-list .button:hover {
       color: #aed82a; }
   .card-list .age {
     width: 50px;
@@ -38,6 +52,32 @@
     content: 'Full'; }
   .card-list .hide::before {
     content: 'Hide'; }
+
+.lobby-card-buttons {
+  padding: 0 95px; }
+  .lobby-card-buttons .button {
+    display: inline-block;
+    cursor: pointer;
+    color: #7c9b1f;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    float: right; }
+    .lobby-card-buttons .button:hover {
+      color: #aed82a; }
+
+.lobby-controllers {
+  padding: 0 100px; }
+  .lobby-controllers > div {
+    padding: 20px; }
+  .lobby-controllers .lobby-controller-link {
+    cursor: pointer;
+    color: #7c9b1f;
+    display: inline-block;
+    margin-right: 20px;
+    background-color: transparent;
+    border: none; }
+    .lobby-controllers .lobby-controller-link:hover {
+      color: #aed82a; }
 
 * {
   font-family: Raleway, Palatino, serif;
@@ -107,6 +147,18 @@ a {
   content: '@'; }
 .kodleesharenet::after {
   content: 'kodleeshare'; }
+
+.controller {
+  display: none; }
+
+.controller-label {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none; }
+
+.card-button, .card-list > div div, .lobby-card-buttons .button, .lobby-controllers > div {
+  background-color: #1a1f05;
+  box-shadow: 2px 2px 5px 0 #110815; }
 
 nav {
   display: block;
