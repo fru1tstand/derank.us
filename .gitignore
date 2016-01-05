@@ -1,5 +1,12 @@
 # IDE folders
 .idea/
+.classpath
+.project
 
 # Cache/Storage folders
 www/styles/cache/
+/bin/
+
+# Libraries
+lib/*
+!lib/readme.md
