@@ -1,9 +1,8 @@
 <?php
-namespace csgoderank\database;
+namespace derankus\database;
+require_once PHP_ROOT . '/derankus/Setup.php';
 use common\mysql\MySQL;
 use common\mysql\QueryBuilder;
-
-require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
 
 class Analytics {
 	/**

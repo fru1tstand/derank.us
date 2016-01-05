@@ -1,6 +1,7 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
-use csgoderank\html\template\StaticPage;
+namespace derankus\html\content;
+require_once PHP_ROOT . '/derankus/Setup.php';
+use derankus\html\template\StaticPage;
 
 $body = <<<HTML
 <div class="section">

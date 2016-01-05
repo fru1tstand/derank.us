@@ -1,7 +1,8 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
+namespace derankus\html\content;
+require_once PHP_ROOT . '/derankus/Setup.php';
 use common\base\Http;
-use csgoderank\feature\HiddenLobby;
+use derankus\feature\HiddenLobby;
 
 $lobbyDbId = Http::getGetParamValue("id");
 

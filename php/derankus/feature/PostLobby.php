@@ -1,6 +1,6 @@
 <?php
-namespace csgoderank\feature;
-require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
+namespace derankus\feature;
+require_once PHP_ROOT . '/derankus/Setup.php';
 
 /**
  * Class PostLobby

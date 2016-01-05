@@ -1,10 +1,9 @@
 <?php
-namespace csgoderank\feature;
+namespace derankus\feature;
+require_once PHP_ROOT . '/derankus/Setup.php';
 use common\base\Preconditions;
 use common\session\Session;
-use csgoderank\database\Queries;
-
-require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
+use derankus\database\Queries;
 
 /**
  * Class HiddenLobby

@@ -1,8 +1,9 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
+namespace derankus\html\content;
+require_once PHP_ROOT . '/derankus/Setup.php';
 use common\base\Http;
-use csgoderank\database\Analytics;
-use csgoderank\database\Queries;
+use derankus\database\Analytics;
+use derankus\database\Queries;
 
 define("LOBBY_ID_PARAM", "lobbyid");
 

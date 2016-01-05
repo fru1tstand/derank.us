@@ -1,10 +1,10 @@
 <?php
-namespace csgoderank\html\template;
-require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
+namespace derankus\html\template;
+require_once PHP_ROOT . '/derankus/Setup.php';
 use common\template\component\ContentField;
 use common\template\component\TemplateField;
 use common\template\Content;
-use csgoderank\feature\HiddenLobby;
+use derankus\feature\HiddenLobby;
 
 /**
  * Class LobbyCard

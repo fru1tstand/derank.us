@@ -1,10 +1,10 @@
 <?php
-namespace csgoderank\database;
-require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
+namespace derankus\database;
+require_once PHP_ROOT . '/derankus/Setup.php';
 use common\mysql\MySQL;
 use common\mysql\QueryBuilder;
-use csgoderank\feature\HiddenLobby;
-use csgoderank\html\template\LobbyCard;
+use derankus\feature\HiddenLobby;
+use derankus\html\template\LobbyCard;
 
 class Queries {
 

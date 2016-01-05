@@ -1,9 +1,9 @@
 <?php
-namespace csgoderank\html\content;
-require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
-use csgoderank\database\Queries;
-use csgoderank\html\template\LobbyCard;
-use csgoderank\html\template\StaticPage;
+namespace derankus\html\content;
+require_once PHP_ROOT . '/derankus/Setup.php';
+use derankus\database\Queries;
+use derankus\html\template\LobbyCard;
+use derankus\html\template\StaticPage;
 
 
 $cardContent = LobbyCard::createContentsFromQuery(Queries::getSelectUniqueLobbiesQuery(10));
@@ -53,7 +53,7 @@ $body = <<<HTML
 <div class="lobby-spacer"></div>
 <iframe class="hidden" id="lobby-linker"></iframe>
 
-<script src="/.site/php/csgoderank/js/index.php"></script>
+<script src="/js/index.php"></script>
 HTML;
 
 StaticPage::createContent()

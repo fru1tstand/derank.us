@@ -1,6 +1,6 @@
 <?php
-namespace csgoderank\html\template;
-require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/csgoderank/Setup.php';
+namespace derankus\html\template;
+require_once PHP_ROOT . '/derankus/Setup.php';
 use common\template\component\ContentField;
 use common\template\component\TemplateField;
 use common\template\Content;
@@ -28,8 +28,8 @@ class StaticPage extends Content {
 
 	<!--<link rel="shortcut icon" href="https://s3.amazonaws.com/ks_web/fru1t.me/favicon.ico" />-->
 	<!--<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400,600'>-->
-	<link rel="stylesheet" href="/.site/styles/cache/raleway.css" />
-	<link rel="stylesheet" href="/.site/styles/compiled/global.css" />
+	<link rel="stylesheet" href="/styles/cache/raleway.css" />
+	<link rel="stylesheet" href="/styles/global.css" />
 </head>
 
 <body>

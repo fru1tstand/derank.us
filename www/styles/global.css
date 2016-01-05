@@ -1,0 +1,196 @@
+#landing-banner {
+  padding: 70px 0 170px 0;
+  background: transparent url(https://s3.amazonaws.com/ks_web/derank.us/iso-overpass.gif) fixed center center no-repeat;
+  background-size: cover; }
+  #landing-banner > div {
+    display: inline-block;
+    padding: 10px 100px;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+#no-lobbies {
+  padding: 0 100px; }
+
+#new-lobby-input {
+  padding: 4px 0;
+  background-color: #1a1f05;
+  color: #b6b6b6;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #36420c;
+  margin-bottom: 4px; }
+
+.lobby-spacer {
+  height: 50px;
+  clear: both; }
+
+.card-list {
+  padding: 0 95px; }
+  .card-list > div {
+    display: flex;
+    flex-wrap: nowrap; }
+    .card-list > div div {
+      padding: 10px;
+      margin: 5px 5px;
+      white-space: nowrap;
+      flex-shrink: 0; }
+  .card-list .button {
+    color: #7c9b1f;
+    cursor: pointer; }
+    .card-list .button:hover {
+      color: #aed82a; }
+  .card-list .age {
+    width: 50px;
+    text-align: center; }
+  .card-list .title {
+    line-height: normal;
+    flex-grow: 1;
+    flex-shrink: 1;
+    white-space: normal; }
+  .card-list .join::before {
+    content: 'Join'; }
+  .card-list .full::before {
+    content: 'Full'; }
+  .card-list .hide::before {
+    content: 'Hide'; }
+
+.lobby-card-buttons {
+  padding: 0 95px; }
+  .lobby-card-buttons .button {
+    display: inline-block;
+    cursor: pointer;
+    color: #7c9b1f;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    float: right; }
+    .lobby-card-buttons .button:hover {
+      color: #aed82a; }
+
+.lobby-controllers {
+  padding: 0 100px; }
+  .lobby-controllers > div {
+    padding: 20px; }
+  .lobby-controllers .lobby-controller-link {
+    cursor: pointer;
+    color: #7c9b1f;
+    display: inline-block;
+    margin-right: 20px;
+    background-color: transparent;
+    border: none; }
+    .lobby-controllers .lobby-controller-link:hover {
+      color: #aed82a; }
+
+* {
+  font-family: Raleway, Palatino, serif;
+  box-sizing: border-box; }
+
+pre {
+  font-family: monospace; }
+
+body, html {
+  height: 100%;
+  background-color: #111504;
+  color: #b6b6b6; }
+
+#content-wrapper {
+  min-height: 100%;
+  margin-bottom: -40px; }
+
+#content-push, footer {
+  height: 40px; }
+
+footer {
+  background-color: #110815;
+  font-size: 12px;
+  padding: 0 100px;
+  line-height: 40px; }
+  footer .right {
+    float: right; }
+
+body, html,
+h1, h2, h3, h4, h5, h6,
+ul, li, ol,
+p,
+fieldset, legend, input, button {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+  a:link, a:visited {
+    color: #7c9b1f; }
+  a:hover, a:active {
+    color: #aed82a; }
+
+.right {
+  text-align: right; }
+
+.hidden {
+  display: none; }
+
+.section {
+  margin: 75px 100px 0 76px;
+  border-left: 6px solid #7c9b1f;
+  padding-left: 18px; }
+
+.section-sm {
+  margin: 45px 100px 0 79px;
+  border-left: 3px solid #7c9b1f;
+  padding-left: 18px; }
+
+.block-text {
+  max-width: 800px; }
+
+.container {
+  margin: 0 100px; }
+
+.kodleesharenet::before {
+  content: '@'; }
+.kodleesharenet::after {
+  content: 'kodleeshare'; }
+
+.controller {
+  display: none; }
+
+.controller-label {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none; }
+
+.card-button, .card-list > div div, .lobby-card-buttons .button, .lobby-controllers > div {
+  background-color: #1a1f05;
+  box-shadow: 2px 2px 5px 0 #110815; }
+
+nav {
+  display: block;
+  background-color: #110815;
+  padding-left: 100px; }
+
+.nav-main {
+  list-style: none; }
+  .nav-main li {
+    display: inline-block; }
+  .nav-main .logo {
+    padding-left: 0;
+    font-weight: bold; }
+  .nav-main a {
+    height: 55px;
+    line-height: 55px;
+    display: block;
+    padding: 0 20px; }
+
+.info-push {
+  height: 100px; }
+
+.block {
+  display: inline-block;
+  margin-right: 20px;
+  height: 30px;
+  width: 30px; }
+  .block.red {
+    background-color: #F00; }
+  .block.green {
+    background-color: #0F0; }
+  .block.blue {
+    background-color: #00F; }
+
+/*# sourceMappingURL=global.css.map */
