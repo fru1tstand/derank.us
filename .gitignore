@@ -1,1 +1,5 @@
+# IDE folders
 .idea/
+
+# Cache/Storage folders
+www/styles/cache/
